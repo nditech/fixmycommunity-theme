@@ -1,0 +1,100 @@
+[% INCLUDE 'header.html', bodyclass='authpage signin', title = loc('Your Reports') %]
+[%# should bodyclass='twothirdspage' instead? Need override for Harrogate %]
+
+<h1>[% loc('Your Reports') %]</h1>
+
+<form action="[% c.uri_for() %]" method="post" name="general_auth" class="validate">
+    <p>[% loc('Use the form below to sign in to view your reports or to create an account to add reports.') %]</p>
+    <div class="email-section">
+    <h3>1. [% loc('Fill in email address and name') %]</h3>
+    <fieldset>
+        <input type="hidden" name="r" value="[% c.req.params.r | html %]">
+            
+            [% IF email_error;
+
+                # other keys include fqdn, mxcheck if you'd like to write a custom error message
+
+                errors = {
+                    missing => loc('Please enter your email'),
+                    other   => loc('Please check your email address is correct')
+                };
+                
+                loc_email_error = errors.$email_error || errors.other;
+            END %]
+        <label class="n" for="email">[% loc('Email') %] <em>(required)</em></label>
+        [% IF loc_email_error  %]
+            <div class="form-error">[% loc_email_error %]</div>
+        [% ELSIF sign_in_error %]
+            <div class="form-error">[% loc('There was a problem with your email/password combination. If you cannot remember your password, or do not have one, please fill in the &lsquo;sign in by email&rsquo; section of the form.') %]</div>
+        [% END %]
+        <input type="email" class="required email" id="email" name="email" value="[% email | html %]" placeholder="[% loc('Your email address') %]">
+	<label for="name">[% loc('Name') %] <em>([% loc('optional') %])</em></label>
+	<input type="text" name="name" value="" placeholder="[% loc('Your name') %]">
+	</div>
+        <div id="form_sign_in">
+            [% IF c.cobrand.moniker == 'fixmybarangay' %]
+            <h3>2. [% loc("Do you have a FixMyBarangay password?") %]</h3>
+            [% ELSE %]
+            <h3>2. [% loc("Do you have a FixMyCommunity password?") %]</h3>
+            [% END %]
+
+            <div id="form_sign_in_yes" class="form-box">
+                <h5>[% loc('<strong>A.</strong> Yes, I have a password.') %]</h5>
+                
+                <label class="hidden-js n" for="password_sign_in">[% loc('<strong>Yes</strong> I have or want to create a password') %]</label>
+
+                <div class="form-txt-submit-box">
+		    <label for="password_sign_in">[% loc('Password') %]</label>
+                    <input type="password" name="password_sign_in" id="password_sign_in" value="" placeholder="[% loc('Your password') %]">
+		    <input type="checkbox" id="remember_me" name="remember_me" value='1'[% ' checked' IF remember_me %]>
+                    <label class="inline n" for="remember_me">[% loc('Keep me signed in on this computer') %]</label>
+                    <input class="green-btn" type="submit" name="sign_in" value="[% loc('Sign in') %]">
+                </div>
+                
+                <!--<input type="checkbox" id="remember_me" name="remember_me" value='1'[% ' checked' IF remember_me %]>
+                <label class="inline n" for="remember_me">[% loc('Keep me signed in on this computer') %]</label>-->
+
+            </div>
+            <div id="form_sign_in_no" class="form-box">
+                <h5>[% loc('<strong>B.</strong> No, but I want to create a password.') %]</h5>
+		<p>We will send an email to confirm your email address. After you confirm your address, you can login using your new password.</p>
+                <!--<label for="name">[% loc('Name') %]</label>
+                <input type="text" name="name" value="" placeholder="[% loc('Your name') %]">-->
+
+                <label for="password_register">[% loc('Password') %]</label>
+
+                <!--<div class="general-notes">
+                    <p>[% loc('Providing a name and password is optional, but doing so will allow you to more easily report problems, leave updates and manage your reports.') %]</p>
+                </div>-->
+
+                <div class="form-txt-submit-box">
+                    <input type="password" name="password_register" id="password_register" value="" placeholder="[% loc('Enter a password') %]">
+                    <input class="green-btn" type="submit" name="email_sign_in" value="[% loc('Create Password') %]">
+                </div>
+            </div>
+	    <div id="form_sign_in_no" class="form-box">
+                <h5>[% loc('<strong>C.</strong> No, I do not want a password. I want to login via my email address.') %]</h5>
+                <p>If you do not have or remember your password, you can login using only your email address. We will send a login link to this email address.</p>
+
+                <!--<label for="name">[% loc('Name') %]</label>
+                <input type="text" name="name" value="" placeholder="[% loc('Your name') %]">
+
+                <label for="password_register">[% loc('Password') %]</label>
+
+                <div class="general-notes">
+                    <p>[% loc('Providing a name and password is optional, but doing so will allow you to more easily report problems, leave updates and manage your reports.') %]
+                </div>-->
+
+                <div class="form-txt-submit-box">
+                    <!--<input type="password" name="password_register" id="password_register" value="" placeholder="[% loc('Enter a password') %]">-->
+                    <input class="green-btn" type="submit" name="email_sign_in" value="[% loc('Send Link') %]">
+                </div>
+            </div>
+
+
+        </div>
+    </fieldset>    
+</form>
+
+
+[% INCLUDE 'footer.html' %]

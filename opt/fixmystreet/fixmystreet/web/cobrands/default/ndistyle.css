@@ -1,0 +1,507 @@
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/montserrat-light-webfont.eot');
+    src: url('fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-light-webfont.woff') format('woff'),
+         url('fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	background:#fff;
+	font-family: 'Montserrat', sans-serif;
+}
+body.frontpage {
+	background:#000;
+}
+h2, #front-main #postcodeForm,
+button, input[type=submit], .btn, ol.big-numbers>li:before,
+#front-howto #front_stats {
+	font-family: 'Montserrat', sans-serif;
+}
+h1, #front-main h2, small, .small-print, a#geolocate_link, .reported-info, .checkbox-group label.inline,
+textarea, input, .intro, .nicetable, #front-main a#geolocate_link {
+	font-family:'montserratlight', Arial, sans-serif;
+} 
+#front-main h1 {
+	font-size:2.5em;
+}
+h1 {
+	margin-top:0.5em;
+}
+td {
+	white-space:normal;
+}
+ol.big-numbers>li:before {
+	font-weight:400;
+}
+.moderate-display > p {
+	font-weight:700;
+}
+#site-header {
+	background:#000;
+	border-top-color:#fa2525;
+	height:6em;
+}
+#front-main {
+	background:#fff;
+	padding:1em;
+}
+#front-main h2 {
+	font-size:0.9em;
+	color:#9b9b9b;
+}
+#front-howto #front_stats {
+	border-top:0.15em solid #ccc;
+	color:#ababab;
+	background:none;
+}
+.issue-list-a li .text small, .list-a li .text small, .issue-list-a li .text .small-print, .list-a li .text .small-print {
+	color:#ababab;
+}
+#front-howto #front_stats div big {
+	color:#fa2525;
+}
+.bordered {
+	border-top:0.25em solid #fa2525;
+	margin:0;
+}
+#front-main a#geolocate_link {
+	color:#61b7f5;
+	background:none;
+}
+#front-main a#geolocate_link:hover {
+	background:none;
+}	
+#front-main #postcodeForm div input#sub, #main-nav ul#main-menu li a:hover {
+	background:#fa2525;
+}
+#front-main #postcodeForm div input#sub:hover {
+	background:#d51c1c;
+}
+.container.lists {
+	width:100%;
+	padding:0;
+}
+footer {
+	background:#000;
+	display:none;
+}
+body.twothirdswidthpage .container .content footer .tablewrapper, body.fullwidthpage .container .content footer .tablewrapper {
+	width:100%;
+	margin:0 auto;
+	background:#000;
+	color:#fff;
+}
+body.fullwidthpage.admin .container.lists .content,
+body.twothirdswidthpage .container .content, .contactwrapper, .privacywrapper, .faqwrapper {
+	width:100%;
+	margin:0 auto;
+	background:#fff;
+}
+.tablewrapper {
+	background:#f9f9f9;
+	padding:0;
+}
+.tablewrapper>div, .reportswrapper {
+	width:100%;
+	margin:0 auto;
+	display:block;
+}
+.reportswrapper {
+	background-color:#f9f9f9;
+	margin-bottom:4em;
+	-webkit-box-shadow: 2px 2px 6px 0px rgba(138,136,138,0.75);
+	-moz-box-shadow: 2px 2px 6px 0px rgba(138,136,138,0.75);
+	box-shadow: 2px 2px 6px 0px rgba(138,136,138,0.75);
+}
+.reportswrapper>div {
+	padding:2em 1em;
+}
+.faq, .privacy, .all-reports {
+	background:#000;
+}
+.frontwrapper>div {
+	display:block;
+	width:100%;
+}
+#main-nav ul#main-menu li span {
+	color:#fa2525;	
+}
+#main-nav ul#main-menu li a.report-a-problem-btn {
+	padding:.75em;
+	color:#fff;
+	background:#fa2525;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+}
+#main-nav ul#main-menu li a.report-a-problem-btn:hover { 
+	background:#d51c1c;
+}
+#main-nav ul li {
+	float:none;
+	display:inline-block;
+	width:100%;
+}
+body.frontpage #site-logo {
+	top:0.9em;
+	background:url("/cobrands/fixmystreet/images/sprite.png") -3px -3px no-repeat;
+	width:175px;
+	height:40px;
+}
+body.frontpage #site-header {
+	height:auto;
+}
+#main-nav:after {
+	content:'';
+	display:table;
+	clear:both;
+}
+.frontpage #main-nav ul {
+	margin-top:10px;
+}
+#footer-nav .tablewrapper ul li {
+	list-style:none;
+	display:inline;
+	margin:0;
+	padding:0;
+	float:left;
+}
+#footer-nav .tablewrapper ul li a, #footer-nav .tablewrapper ul li span {
+	display:block;
+	color:#fff;
+	background:none;
+	border-bottom:none;
+	padding:0.75em;
+	font-size:0.9em;
+}
+#footer-nav .tablewrapper ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	float:left;
+}
+#footer-nav .tablewrapper #footer-help-nav {
+	float:right;
+}
+body.twothirdswidthpage .container .content footer .tablewrapper, body.fullwidthpage .container .content footer .tablewrapper {
+	padding-top:1em;
+	padding-bottom:1em;
+}
+body.twothirdswidthpage.alertindex .container .content {
+	padding:0;
+}
+body.twothirdswidthpage.alertindex .container .content>div, .faqwrapper>div, .privacywrapper>div, .contactwrapper>div {
+	padding:1em;
+}
+body.frontpage .table-cell .content {
+	margin:0;
+	padding:0;
+}
+#site-logo, body.frontpage #site-logo {
+	width:242px;
+}
+body.mappage .nav-wrapper .nav-wrapper-2 {
+	background:#000;
+}
+.shadow-wrap ul#key-tools {
+	border-top:0.25em solid #fa2525;
+}
+.shadow-wrap ul#key-tools li a, .shadow-wrap ul#key-tools li input[type=submit] {
+	background-color:#000;
+	color:#fff;
+}
+.shadow-wrap ul#key-tools li a:hover, .shadow-wrap ul#key-tools li input[type=submit]:hover {
+	background-color:#f5f5f5;
+	color:#666;
+}
+#front-main #postcodeForm div {
+	border:1px solid lightgrey;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	height:33px;
+}
+#front-main #postcodeForm div input#pc {
+	max-width:100%;
+	width:83%;
+	position:absolute;
+	left:0;
+}	
+.issue-list-a li, .list-a li {
+	border-bottom:2px solid #ccc;
+	padding-bottom:5px;
+	background:transparent;
+}
+.issue-list-a li:hover, .list-a li:hover,
+.issue-list-a li a:hover, .list-a li a:hover {
+	background:transparent;
+}
+small, .small-print {
+	font-style:normal;
+}
+.issue-list-a li .text, .list-a li .text,
+.checkbox-group label.inline  {
+	padding:0;
+}
+table.nicetable thead {
+	border-bottom:0.25em solid #ececec;
+}
+body.twothirdswidthpage .container .content, body.fullwidthpage .container .content {
+	padding:1em 0;
+}
+table.nicetable tr.a {
+	background:#ececec;
+}
+table.nicetable tr:hover {
+	background:#f9f3ac;
+}
+.mappage .content {
+	-webkit-box-shadow:6px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow:6px 0px 5px 0px rgba(0,0,0,0.75);
+}
+body.mappage #main-nav ul#main-menu li a, body.mappage #main-nav ul#main-menu li span {
+	padding:0.75em;
+}
+body.mappage #main-nav ul#main-menu li a.report-a-problem-btn {
+	padding:0.75em;
+	margin:0.9em;
+}
+.issue-list-a, .list-a {
+	border-bottom:none;
+	padding:1em;
+}
+.content {
+	margin:0 auto;
+	padding:1em;
+}
+.privacy .content {
+	min-height:0!important;
+}
+.green-btn, button.green-btn, input.green-btn {
+	background:#fa2525;
+	background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fa2525), color-stop(100%, #d51c1c));
+	background: -webkit-linear-gradient(#fa2525,#d51c1c);
+	background:-moz-linear-gradient(#fa2525,#d51c1c);
+	background:-o-linear-gradient(#fa2525,#d51c1c);
+	background:linear-gradient(#fa2525,#d51c1c);
+	border:1px solid #d51c1c;
+}
+.green-btn:hover, button.green-btn:hover, input.green-btn:hover {
+	background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d51c1c), color-stop(100%, #fa2525));
+	background: -webkit-linear-gradient(#d51c1c,#fa2525);
+	background:-moz-linear-gradient(#d51c1c,#fa2525);
+	background:-o-linear-gradient(#d51c1c,#fa2525);
+	background:linear-gradient(#d51c1c,#fa2525);	
+	border:1px solid #d51c1c;
+}
+.big-green-banner {
+	background:#fa2525 url("/cobrands/fixmystreet/images/sprite.png") right -2188px no-repeat;
+}
+.big-green-banner:before {
+	border-left:0.5em solid #d51c1c;
+}
+.mobile-map-banner {
+	background:rgba(0,0,0,0.7);
+}
+body.twothirdswidthpage.contact .container .content,
+body.twothirdswidthpage.privacy .container .content,
+body.twothirdswidthpage.faq .container .content {
+	width:100%;
+	padding:0;
+}
+#front-main #postcodeForm {
+	background:#fff;
+}
+.full-width, .shadow-wrap, #footer-mobileapps, #map_box, .promo, .alert, #front-main #postcodeForm {
+	margin:0;
+}
+#front-recently>div, #front-howto>div {
+	padding:10px;
+}
+#report-cta {
+	top:4.5em;
+}
+#nav-link {
+	top:3em;
+}
+#front-main #postcodeForm div input#sub {
+	position:absolute;
+	right:0;
+	height:33px;
+	float:none;
+	top:0;
+}
+#site-header .container {
+	min-height:2.5em;
+}
+.frontpage #site-header .container {
+        min-height:4em;
+}
+.my-reports .issue-list-a li, .my-reports .list-a li {
+	width:94%;
+}
+#side-form .form-box {
+	margin-top:20px;
+}
+#user-meta p {
+	margin-top:10px;
+}
+body.frontpage #user-meta p {
+	margin-bottom:0;
+}
+body.frontpage #user-meta {
+	max-width:100%;
+}
+form[name=change_password] input[type=submit] {
+	margin-top:20px;
+}
+.authpage #user-meta {
+	z-index:10;
+}
+.signin .tabs {
+	margin:15px 0 0 0;
+	padding:0;
+}
+.signin .tabs li {
+	padding:0;
+	margin:0;
+	display:inline-block;
+}
+.signin .tabs li a {
+	padding:10px;
+	border:1px solid #ccc;
+	display:block;
+	margin-right:-5px;
+}
+.signin .tabs li a.active {
+	background-color:#000;
+	color:#fff;
+	pointer-events:none;
+	cursor:default;	
+}
+.signin .signup-form {
+	display:none;
+}
+.signin .form-box h5 strong {
+	font-size:inherit;
+	margin-right:0;
+}
+.signin .form-box {
+	background-color:transparent;
+	margin:0;
+	border-bottom:1px solid #ccc;
+}
+.signin .email-section, .signin #form_sign_in {
+	background:#eee;
+	margin-bottom:25px;
+	padding:1em;
+}
+.signin .form-txt-submit-box:after {
+	content:'';
+	display:table;
+	clear:both;
+}
+.signin .form-txt-submit-box {
+	margin-bottom:10px;
+}
+.signin h3 {
+	margin-top:0;
+	font-weight:bold;
+}
+.signin h2 {
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.signin .form-txt-submit-box input[type=submit] {
+	width:auto;
+	margin-top:15px;
+}
+.signin .form-txt-submit-box input[type=password] {
+	width:100%;
+}
+.no-reports {
+	padding:1em;
+}
+@media (min-width:400px) {
+	#report-cta {
+		top:1.5em;
+	}
+	#nav-link {
+		top:0.25em;
+	}
+	#site-header {
+		height:auto;
+	}
+	#user-meta p {
+        	margin-top:0;
+	}
+}
+@media (min-width:768px) {
+	.frontwrapper>div {
+		width:45%;
+		float:left;
+	}
+	.tablewrapper {
+        	padding:3em 0;
+	}
+	.full-width, .shadow-wrap, #footer-mobileapps, #map_box, .promo, .alert, #front-main #postcodeForm {
+		margin:0 -1em;
+	}
+	#main-nav ul li {
+		width:auto;
+	}
+	.nav-wrapper .nav-wrapper-2 {
+		border-top:4px solid #fa2525;
+	}
+	footer {
+		display:block;
+	}
+	#main-nav ul li a, #main-nav ul li span {
+		color:#fff;
+	}
+	#front-main #postcodeForm div input#pc {
+		width:86%;
+	}
+	#front-main #postcodeForm div input#sub {
+		width:40px;
+	}
+	#front-main #postcodeForm div {
+		width:57%;
+	}
+	#front-main {
+		padding:4em 1em;
+	}
+	#site-header .container {
+		min-height:4em;
+	}
+	body.mappage #user-meta {
+		margin-top:8px;
+	}
+}
+@media (min-width:872px) {
+	#front-main #postcodeForm div input#pc {
+		width:91%;
+	}
+}
+@media (min-width:960px) {
+	body.twothirdswidthpage .container .content footer .tablewrapper, 
+	body.fullwidthpage.admin .container.lists .content, body.twothirdswidthpage .container .content, .contactwrapper, .privacywrapper, .faqwrapper,
+	.tablewrapper>div, .reportswrapper  {
+        	width:960px;
+	}
+	
+}
+@media (min-width:1013px) {
+	 body.fullwidthpage .container .content footer .tablewrapper {
+		width:960px;
+
+	}
+}

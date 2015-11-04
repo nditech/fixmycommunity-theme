@@ -1,0 +1,24 @@
+[% map_js = PROCESS 'front/javascript.html' %]
+
+[% pre_container_extra = PROCESS 'around/postcode_form.html' %]
+[% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage' %]
+
+[% IF error %]
+    <p class="form-error">[% error %]</p>
+[% END %]
+
+[% TRY %][% PROCESS 'front/pre-steps.html' %][% CATCH file %][% END %]
+
+<div class="tablewrapper">
+    <div class="frontwrapper">
+    	<div id="front-howto">
+		<div>
+        	[% INCLUDE 'index-steps.html' %]
+		</div>
+    	</div>
+
+    	[% INCLUDE 'front/recent.html' %]
+    </div>
+</div>
+
+[% INCLUDE 'footer.html' pagefooter = 'yes' %]
